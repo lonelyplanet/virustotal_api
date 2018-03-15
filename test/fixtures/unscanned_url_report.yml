@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.virustotal.com/vtapi/v2/url/report
+    body:
+      encoding: UTF-8
+      string: resource=http%3A%2F%2Fwww.unscanned.com&apikey=testapikey&scan=1
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      Content-Length:
+      - '118'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - www.virustotal.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      X-Cloud-Trace-Context:
+      - c84c4f4eb1779a0f9dc92289b5c1c038
+      Date:
+      - Thu, 15 Mar 2018 14:45:55 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '439'
+    body:
+      encoding: UTF-8
+      string: '{"permalink": "https://www.virustotal.com/url/70c70c5c65bfd7fa317c625e7c5c020275b56b2cb6e8017b44f568c56b7794a1/analysis/1521125155/",
+        "resource": "http://www.unscanned.com/", "url": "http://www.unscanned.com/",
+        "response_code": 1, "scan_date": "2018-03-15 14:45:55", "scan_id": "70c70c5c65bfd7fa317c625e7c5c020275b56b2cb6e8017b44f568c56b7794a1-1521125155",
+        "verbose_msg": "Scan request successfully queued, come back later for the
+        report"}'
+    http_version:
+  recorded_at: Thu, 15 Mar 2018 14:45:55 GMT
+recorded_with: VCR 4.0.0
